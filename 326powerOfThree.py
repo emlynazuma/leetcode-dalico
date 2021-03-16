@@ -11,6 +11,6 @@ class Solution:
             r = n % 3
             if r != 0:
                 return False
-            elif q == 1 :
+            elif q == 1:
                 return True
             n = q

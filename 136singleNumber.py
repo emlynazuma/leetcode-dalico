@@ -19,8 +19,7 @@ class Solution2:
             ans ^= num
         return ans
 
-foo = []
-foo.remove()
+
 if __name__ == "__main__":
     nums = [4, 1, 2, 1, 2]
     solution = Solution()

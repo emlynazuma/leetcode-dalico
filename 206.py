@@ -6,19 +6,12 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        temp = []
+        prev = None
+        cur = head
 
-        while head:
-            temp.append(head.val)
-            head = head.next
-
-        g = h = None
-
-        while temp:
-            if not g:
-                g = h = ListNode(temp.pop())
-                continue
-            g.next = ListNode(temp.pop())
-            g = g.next
-
-        return h
+        while cur:
+            nex = cur.next
+            cur.next = prev
+            prev = cur
+            cur = nex
+        return prev
